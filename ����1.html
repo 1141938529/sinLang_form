@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;height: 100px;
+			}
+			#div2{background-color: yellow;}
+			#div1{background-color: red;}
+		</style>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#div1").hover(function(){
+					//$("#div2").hide(1000)
+					//$("#div2").fadeOut(1000)
+					//$("#div2").fadeTo(1000,0.3)
+					$("#div2").slideUp(1000)
+					
+				},function(){
+					//$("#div2").show(1000)
+					//$("#div2").fadeTo(1000,1)
+					$("#div2").slideDown(1000)
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>

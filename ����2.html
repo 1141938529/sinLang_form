@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 100px;height: 100px;
+			}
+			#div2{background-color: yellow;}
+			#div1{background-color: red;}
+		</style>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script>
+			$(function(){
+				$("#div1").hover(function(){
+					
+				/*	$("#div2").animate({
+						height:300,
+						width:300
+					},1000,function(){})
+				*/
+				$("#div2").animate({width:300},1000).animate(
+					{height:300},1000).animate({opacity:0.3},1000)
+				
+				},function(){
+					
+					/*
+					 $("#div2").animate({
+						height:100,
+						width:100
+					},1000,function(){})
+					 */
+					
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+</html>
